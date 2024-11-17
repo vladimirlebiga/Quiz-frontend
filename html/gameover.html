@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Over</title>
+  </head>
+  <body>
+    <a href="../index.html">Start New Game</a>
+    <script>
+      const score = localStorage.getItem("Score");
+      const p = document.createElement("p");
+      p.textContent = `You won ${score}`;
+      document.body.append(p);
+      localStorage.setItem("Score", 0);
+    </script>
+  </body>
+</html>
